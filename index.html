@@ -17,7 +17,7 @@
             <h2>Total Expenses</h2>
             <p>KES 0.00</p>
         </div>
-        <label for="Home Currency">Home Currency:
+        <label class="home-currency" for="Home Currency">Home Currency:
             <select name="currency" id="currency">
                 <option value="KES">KES</option>
                 <option value="USD">USD</option>
@@ -29,7 +29,7 @@
 
     <section class="add-expense">
         <h2>Add New Expense</h2>
-        <form action="">
+        <form id="expense-form">
             <label for="Description">Description
                 <input type="text" id="description" placeholder="e.g. Lunch at KFC">
             </label>
@@ -52,11 +52,11 @@
                     <option value="Shopping">Shopping</option>
                 </select>
             </label>
-            <button type="submit">Add Expense</button>
+            <button class="submit-button" type="submit">Add Expense</button>
         </form>
     </section>
 
-    <section>
+    <section class="category-filter">
         <h3>Filter by Category</h3>
         <select name="filter" id="filter">
             <option value="All">All Categories</option>
