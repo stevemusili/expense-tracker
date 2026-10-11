@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -30,21 +31,23 @@
     <section class="add-expense">
         <h2>Add New Expense</h2>
         <form id="expense-form">
-            <label for="Description">Description
+            <label class="form-label" for="Description">Description
                 <input type="text" id="description" placeholder="e.g. Lunch at KFC">
             </label>
-            <label for="Amount">Amout
-                <input type="number" id="amount" placeholder="10.50" step="0.01">
-            </label>
-            <label for="Currency">Currency
-                <select name="currency" id="currency">
-                    <option value="USD">USD</option>
-                    <option value="KES">KES</option>
-                    <option value="EUR">EUR</option>
-                    <option value="GBP">GBP</option>
-                </select>
-            </label>
-            <label for="Category">Category
+            <div class="amount-currency">
+                <label class="form-label" for="Amount">Amount
+                    <input type="number" id="amount" placeholder="10.50" step="0.01">
+                </label>
+                <label class="form-label" for="Currency">Currency
+                    <select name="currency" id="currency">
+                        <option value="USD">USD</option>
+                        <option value="KES">KES</option>
+                        <option value="EUR">EUR</option>
+                        <option value="GBP">GBP</option>
+                    </select>
+                </label>
+            </div>
+            <label class="form-label" for="Category">Category
                 <select name="category" id="category">
                     <option value="Food">Food</option>
                     <option value="Transport">Transport</option>
