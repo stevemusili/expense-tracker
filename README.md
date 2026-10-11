@@ -17,4 +17,8 @@ The Expense Tracker is a simple web application that allows users to record,mana
 - CSS
 - JavaScript
 
-
+## Project Structure
+- index.html
+- style.css
+- script.js
+- README.md
