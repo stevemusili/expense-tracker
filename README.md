@@ -12,4 +12,9 @@ The Expense Tracker is a simple web application that allows users to record,mana
 - Simple and user-friendly interface.
 - Responsive design for different screen sizes.
 
-##
+## Technologies Used
+- HTML
+- CSS
+- JavaScript
+
+
