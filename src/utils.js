@@ -32,3 +32,13 @@ export function calculateTotal(expenses, homeCurrency, rates) {
     }, 0);
 }
 
+export function filterExpenses(expenses, category) {
+    if (category === "All") {
+        return expenses;
+    }
+
+    return expenses.filter(
+        (expense) => expense.category === category
+    );
+}
+
