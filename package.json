@@ -1,8 +1,8 @@
 {
   "name": "expense-tracker",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A multi-currency expense tracker using live exchange rates",
+  "main": "main.js",
   "type": "module",
   "scripts": {
     "start": "npx serve",
