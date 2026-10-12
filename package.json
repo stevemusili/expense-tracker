@@ -1,0 +1,27 @@
+{
+  "name": "expense-tracker",
+  "version": "1.0.0",
+  "description": "A multi-currency expense tracker using live exchange rates",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "start": "npx serve",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "lint": "eslint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stevemusili/expense-tracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stevemusili/expense-tracker/issues"
+  },
+  "homepage": "https://github.com/stevemusili/expense-tracker#readme",
+  "devDependencies": {
+    "eslint": "^10.12.0",
+    "jest": "^30.5.2"
+  }
+}
