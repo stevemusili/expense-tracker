@@ -42,3 +42,11 @@ export function filterExpenses(expenses, category) {
     );
 }
 
+export function formatMoney(amount, currency) {
+    return new Intl.NumberFormat("en-KE", {
+        style: "currency",
+        currency,
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+    }).format(amount);
+}
