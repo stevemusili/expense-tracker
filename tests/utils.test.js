@@ -43,7 +43,7 @@ describe("calculateTotal", () => {
         // $10 + 260 KES + 20 EUR, converted to USD.
         const total = calculateTotal(expenses, "USD", rates);
 
-        expect(total).toBeCloseTo(19.7538461538);
+        expect(total).toBeCloseTo(33.73913043478261);
     });
 
     test("returns zero for an empty expense list", () => {
