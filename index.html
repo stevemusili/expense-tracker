@@ -12,63 +12,74 @@
     <header class="header">
         <h1>Expense Tracker</h1>
     </header>
-
-    <section class="total">
-        <div>
-            <h2>Total Expenses</h2>
-            <p>KES 0.00</p>
-        </div>
-        <label class="home-currency" for="Home Currency">Home Currency:
-            <select name="currency" id="currency">
-                <option value="KES">KES</option>
-                <option value="USD">USD</option>
-                <option value="EUR">EUR</option>
-                <option value="GBP">GBP</option>
-            </select>
-        </label>
-    </section>
-
-    <section class="add-expense">
-        <h2>Add New Expense</h2>
-        <form id="expense-form">
-            <label class="form-label" for="Description">Description
-                <input type="text" id="description" placeholder="e.g. Lunch at KFC">
+    <main class="main-content">
+        <section class="total">
+            <div>
+                <h2>Total Expenses</h2>
+                <p id="total-amount">KES 0.00</p>
+            </div>
+            <label for="home-currency">Home Currency
+                <select name="homeCurrency" id="home-currency">
+                    <option value="KES" selected>KES</option>
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="GBP">GBP</option>
+                </select>
             </label>
-            <div class="amount-currency">
-                <label class="form-label" for="Amount">Amount
-                    <input type="number" id="amount" placeholder="10.50" step="0.01">
+        </section>
+
+        <div id="status" role="status" aria-live="polite">
+            Loading exchange rates...
+        </div>
+
+        <section class="add-expense">
+            <h2>Add New Expense</h2>
+            <form id="expense-form">
+                <label class="form-label" for="Description">Description
+                    <input type="text" id="description" placeholder="e.g. Lunch at KFC">
                 </label>
-                <label class="form-label" for="Currency">Currency
-                    <select name="currency" id="currency">
-                        <option value="USD">USD</option>
-                        <option value="KES">KES</option>
-                        <option value="EUR">EUR</option>
-                        <option value="GBP">GBP</option>
+                <div class="amount-currency">
+                    <label class="form-label" for="Amount">Amount
+                        <input type="number" id="amount" placeholder="10.50" min="0.01" step="0.01">
+                    </label>
+                    <label class="form-label" for="Currency">Currency
+                        <select name="currency" id="expense-currency" required>
+                            <option value="USD">USD</option>
+                            <option value="KES">KES</option>
+                            <option value="EUR">EUR</option>
+                            <option value="GBP">GBP</option>
+                        </select>
+                    </label>
+                </div>
+                <label class="form-label" for="Category">Category
+                    <select name="category" id="category" required>
+                        <option value="Food">Food</option>
+                        <option value="Transport">Transport</option>
+                        <option value="Entertainment">Entertainment</option>
+                        <option value="Shopping">Shopping</option>
                     </select>
                 </label>
-            </div>
-            <label class="form-label" for="Category">Category
-                <select name="category" id="category">
+                <button class="submit-button" type="submit">Add Expense</button>
+            </form>
+        </section>
+
+        <section class="expense-list">
+            <h2>Your Expense</h2>
+            <div class="category-filter">
+                <label for="filter">Filter by Category</label>
+                <select id="filter">
+                    <option value="All">All Categories</option>
                     <option value="Food">Food</option>
                     <option value="Transport">Transport</option>
                     <option value="Entertainment">Entertainment</option>
                     <option value="Shopping">Shopping</option>
                 </select>
-            </label>
-            <button class="submit-button" type="submit">Add Expense</button>
-        </form>
-    </section>
+            </div>
 
-    <section class="category-filter">
-        <h3>Filter by Category</h3>
-        <select name="filter" id="filter">
-            <option value="All">All Categories</option>
-            <option value="Food">Food</option>
-            <option value="Transport">Transport</option>
-            <option value="Entertainment">Entertainment</option>
-            <option value="Shopping">Shopping</option>
-        </select>
-    </section>
+            <ul id="expenses-container" aria-live="polite"></ul>
+        </section>
+        <script type="module" src="src/main.js"></script>
+    </main>
 </body>
 
 </html>
