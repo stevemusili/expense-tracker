@@ -20,3 +20,15 @@ export function convertCurrency(amount, fromCurrency, toCurrency, rates) {
     // Rates are relative to the same base currency.
     return (amount / rates[fromCurrency]) * rates[toCurrency];
 }
+
+export function calculateTotal(expenses, homeCurrency, rates) {
+    return expenses.reduce((total, expense) => {
+        return total + convertCurrency(
+            expense.amount,
+            expense.currency,
+            homeCurrency,
+            rates
+        );
+    }, 0);
+}
+
