@@ -44,3 +44,26 @@ expense-tracker/
 └── README.md
 
 ```
+## Installation
+Install Node.js, then run:
+```
+npm install
+npm install --save-dev serve
+```
+
+## Run the application
+```
+npm start
+```
+Open the local URL in your terminal.
+
+## Run tests
+```
+npm test
+```
+
+## Run ESLint
+```
+npm run lint 
+```
+
