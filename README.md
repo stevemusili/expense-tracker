@@ -3,7 +3,9 @@
 ## Description
 The Expense Tracker is a simple web application that allows users to record,manage, and monitor their spending,organise expenses
 ,and understand how their money is being used.
-## Live Demo
+
+## Live Demo Link
+[View expense-tracker on GitHub pages](https://stevemusili.github.io/expense-tracker/)
 
 ## Features
 - Convert amounts between different currencies.
