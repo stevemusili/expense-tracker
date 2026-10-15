@@ -9,15 +9,22 @@
 
 body {
     background-color: #f0e5e5;
-    color: #333;
+    color: black;
     line-height: 1.6;
 }
 
 .header {
-    background-color: rgb(65, 65, 228);
+    background-color: rgb(76, 12, 112);
     color: white;
     padding: 20px;
     text-align: center;
+}
+
+.main-content {
+    align-items: center;
+    padding: 20px;
+    margin: auto;
+    max-width: 1200px;
 }
 
 .total {
@@ -26,89 +33,77 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px;
-    margin: 40px;
+    padding: 20px;
+    margin: 20px;
     border-radius: 10px;
 }
 
 .total h2 {
-    font-size: 20px;
+    font-size: 25px;
 }
 
 #total-amount {
-    color: #333;
+    color: black;
     font-size: 20px;
     font-weight: 700;
 }
 
 .total label {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    font-size: 14px;
+    display: block;
+    gap: 10px;
+    font-size: 16px;
 }
 
 #home-currency {
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid white;
     border-radius: 5px;
-    font-size: 14px;
+    font-size: 16px;
     outline: none;
 }
 
 .add-expense {
-    padding: 40px;
-    background-color: #f9f9f9;
+    padding: 20px;
+    background-color: white;
     border-radius: 10px;
-    margin: 40px;
+    margin: 20px;
+    font-size: 16px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
+    max-width: 500px;
 }
 
 .add-expense h2 {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     text-align: center;
-    font-size: 24px;
+    font-size: 25px;
 }
 
 #expense-form {
     display: flex;
-    gap: 15px;
+    gap: 10px;
     flex-direction: column;
 }
 
 #expense-form label {
     display: flex;
     flex-direction: column;
-    font-weight: 500;
-    font-size: 14px;
-    font-weight: 500px;
+    font-size: 16px;
+    font-weight: bold;
     gap: 5px;
 }
 
-#expense-form input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 14px;
-    outline: none;
-}
-
+#expense-form input,
 #expense-form select {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
+    font-size: 16px;
     outline: none;
-} 
-
-#expense-form ::placeholder {
-    color: #aaa;
+    cursor: pointer;
 }
 
 .submit-button {
-    background-color: rgb(65, 65, 228);
+    background-color:rgb(76, 12, 112) ;
     color: white;
     border: none;
     padding: 10px;
@@ -120,61 +115,62 @@ body {
 }
 
 .submit-button:hover {
-    background-color: rgb(45, 45, 200);
+    background-color: rgb(182, 54, 233);
 }
 
 .expense-list {
-    margin: 40px;
+    margin: 20px;
 }
 
 .expense-list h2 {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .category-filter {
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
+    max-width: 500px;
     display: flex;
     flex-direction: column;
 }
 
 #filter {
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 1px solid white;
+    border-radius: 10px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 16px;
     outline: none;
 }
 
 #filter:hover {
-    border-color: rgb(65, 65, 228);
+    border-color: rgb(76, 12, 112);
 }
 
 #status {
-    margin: 40px;
+    margin: 20px;
     padding: 20px;
-    border-radius: 5px;
-    font-size: 14px;
+    border-radius: 10px;
+    font-size: 16px;
 }
 
 .status-success {
-    color:#333;
-    background:#f9f9f9
+    color: black;
+    background: white;
 }
 
 .status-error {
     color:#aaa;
-    background: #f0e5e5;
+    background: white;
 }
 
 #expenses-container {
     list-style: none;
     display: grid;
     gap: 10px;
+    margin: 20px;
 }
 
 .expense-item {
@@ -184,16 +180,16 @@ body {
     gap: 10px;
     flex-wrap: wrap;
     padding: 20px;
-    background: #f0e5e5;
-    border-radius: 5px;
+    background: white;
+    border-radius: 10px;
 }
 
 .expense-details h3 {
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .expense-details p {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .converted-amount {
@@ -201,21 +197,21 @@ body {
 }
 
 .delete-button {
-    background: #2e50d9;
-    color: #f0e5e5;
+    background: rgb(76, 12, 112);
+    color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 5px 10px;
     cursor: pointer;
 }
 
 .delete-button:hover {
-    background: #0027c4;
+    background: rgb(182, 54, 233);
 }
 
 .empty-message {
     padding: 20px;
-    color: #333;
-    background: #f0e5e5;
-    border-radius: 5px;
+    color: black;
+    background: white;
+    border-radius: 10px;
 }
